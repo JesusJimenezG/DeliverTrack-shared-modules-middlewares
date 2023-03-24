@@ -20,10 +20,8 @@ const validateToken = (req, res, next, jwt_secret) => {
         return res.status(401).json({ message: 'Invalid token' });
     }
     const fingerprint = decodedToken.fingerprint;
-
     // Get the cookie and compare it with the hashed user context
     const session_fingerprint = req.cookies.fingerprint;
-
     const hash = (0, encrypt_handler_1.hashString)(session_fingerprint);
     if (hash !== fingerprint) {
         return res.status(401).json({ message: 'Invalid session_fingerprint' });
