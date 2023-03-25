@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.validateToken = void 0;
 const encrypt_handler_1 = require("../utils/encrypt.handler");
 const jwt_handler_1 = require("../utils/jwt.handler");
 const validateToken = (req, res, next, jwt_secret) => {
@@ -28,4 +29,4 @@ const validateToken = (req, res, next, jwt_secret) => {
     }
     return next();
 };
-exports.default = validateToken;
+exports.validateToken = validateToken;

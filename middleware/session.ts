@@ -34,4 +34,4 @@ const validateToken = (req: Request, res: Response, next: NextFunction, jwt_secr
     return next();
 };
 
-export default validateToken;
+export {validateToken};

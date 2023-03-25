@@ -2,7 +2,7 @@
     "name": "session-authentication-middleware",
     "version": "1.0.0",
     "description": "Middleware for session authentication using JWT tokens",
-    "main": "middleware/session.js",
+    "main": "index.js",
     "scripts": {
         "tsc": "tsc"
     },
